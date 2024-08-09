@@ -19,6 +19,12 @@ it('deve completar o cadastro com sucesso', () => {
     cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
 });
 
+it.only('Deve completar o cadastro com sucesso - usando o comando customizado', () => {
+    cy.preCadastro(faker.internet.email(), 'teste123', faker.person.firstName(), faker.person.lastName())
+    cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados com sucesso.')
+
+});
+
 it('deve completar o cadastro com sucesso - Usando variáveis', () => {
     var email = faker.internet.email()
     var nome = faker.person.firstName()
