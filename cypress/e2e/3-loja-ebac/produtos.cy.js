@@ -1,5 +1,5 @@
 /// <reference types="cypress"/>
-import produtosPage from "../support/page-objects/produtos.page"
+import produtosPage from "../../support/page-objects/produtos.page"
 
 
 describe('funcionalidade: Produtos', () => {
