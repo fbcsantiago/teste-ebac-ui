@@ -47,12 +47,11 @@ describe('funcionalidade: Login', () => {
        cy. get('.woocommerce-form > .button').click()
        cy. get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, fernanda.teste1 (não é fernanda.teste1? Sair)')
         
-    
-    })
+        })
 
        });
 
-       it.only('Deve fazer login com sucesso - usando comandos customizado', () => {
+       it('Deve fazer login com sucesso - usando comandos customizado', () => {
           cy.login('fernanda.teste1@ebac.com.br','De102102@')
           cy. get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, fernanda.teste1 (não é fernanda.teste1? Sair)')
 
